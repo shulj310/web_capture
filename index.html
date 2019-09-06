@@ -4,8 +4,13 @@
 	<title>WebRTC: Still photo capture demo</title>
 	<meta charset='utf-8'>
 	<link rel="stylesheet" href="main.css" type="text/css" media="all">
-	<script src="capture.js">
-	</script>
+	<!-- <script src="capture.js"> -->
+	<!-- </script> -->
+  <script>
+  const fileInput = document.getElementById('file-input');
+
+  fileInput.addEventListener('change', (e) => console.log(e));
+</script>
 </head>
 <body>
 <div class="contentarea">
@@ -15,12 +20,13 @@
 	<p>
 		This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
 	</p>
-  <div class="camera">
+  <!-- <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="startbutton">Take photo</button>
-  </div>
-  <canvas id="canvas">
-  </canvas>
+  </div> -->
+  <input id="file-input" type="file" accept="image/*" capture="user">
+  <!-- <canvas id="canvas">
+  </canvas> -->
   <div class="output">
     <img id="photo" alt="The screen capture will appear in this box.">
   </div>
